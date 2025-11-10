@@ -116,19 +116,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         `;
         form.replaceWith(thankYou);
 
-        // If Formspree returned a next path, redirect after a short delay
-        if (data && data.next) {
-          // Respect absolute or relative URLs
-          const nextUrl = data.next;
-          setTimeout(() => {
-            if (/^https?:\/\//i.test(nextUrl) || nextUrl.startsWith('/')) {
-              window.location.href = nextUrl;
-            } else {
-              // relative path
-              window.location.href = window.location.origin.replace(/\/$/, '') + '/' + nextUrl.replace(/^\//, '');
-            }
-          }, 1600);
-        }
+        // Keep the in-place thank-you card and do not redirect the user.
+        // (Previously we redirected if Formspree returned `data.next`.)
       } else {
         const msg = (data && (data.error || data.message)) ? (data.error || data.message) : 'There was a problem sending your message.';
         setStatus(msg, true);
