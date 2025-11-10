@@ -18,7 +18,7 @@ Patterns & conventions (concrete, not aspirational)
   Example: `:root { --brand-navy: #1e3a5f; --brand-orange: #ff6b35; }`
 - Mobile nav: the hamburger uses id `mobile-menu-toggle`. Toggling adds/removes `active` on `#nav-links` (see `script.js`). Modify classes/styles rather than adding inline JS when possible.
 - Smooth scroll: anchors use `href="#..."` and the JS subtracts the `nav` height when calculating target position. Preserve that offset calculation when changing navigation height.
-- Contact form: currently posts to Formspree (action `https://formspree.io/f/xwpaeodq`) with `method="post"` and `enctype="text/plain"`. To swap providers, update `action` only.
+- Contact form: currently posts to Formspree (action `https://formspree.io/f/xvgdopwr`) with `method="post"` and `enctype="text/plain"`. To swap providers, update `action` only.
 
 Integration points / external dependencies
 - Background image in the hero uses an external Unsplash URL (in `styles.css`). Consider downloading assets into `assets/` if you want offline hosting.
