@@ -112,7 +112,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         thankYou.className = 'thank-you-card container';
         thankYou.innerHTML = `
           <h2>Thanks — we'll be in touch!</h2>
-          <p>We received your message and will get back to you shortly. If you'd like immediate help, email <a href=\"mailto:hello@resiliencesolutions.com\">hello@resiliencesolutions.com</a>.</p>
+          <p>We received your message and will get back to you shortly. If you'd like immediate help, email <a href=\"mailto:resiliencesolutions.us@gmail.com\">resiliencesolutions.us@gmail.com</a>.</p>
         `;
         form.replaceWith(thankYou);
 
