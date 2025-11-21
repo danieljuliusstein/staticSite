@@ -1,51 +1,42 @@
 # Copilot / AI agent instructions — static-site
 
-Purpose: Help an AI coding agent quickly understand, modify, and extend this tiny static site.
+Purpose: Fast, practical guidance to edit and maintain this tiny static site.
 
-Key facts (big picture)
-- This is a single-page static website: `index.html` + `styles.css` + `script.js`.
-- No build tools, package managers, server code, or tests in the repo. Edits are made directly to source files.
-- The site is deployed as static assets (upload the folder to any static host or drop `index.html` in a webroot).
+**Big picture**
+- Single-page static website: `index.html` (markup) + `styles.css` (styles) + `script.js` (behavior).
+- No build system, frameworks, or backend—everything is edited in-place and deployed as static assets.
+- Contact form posts to a third-party (Formspree); no server-side processing in this repo.
 
-Primary files to read and edit
-- `index.html` — semantic content, section structure, contact form. Major sections: nav, #about (hero), #info, #contact, footer.
-- `styles.css` — global design, brand variables (see `:root`). Change colors, spacing and responsive breakpoints here.
-- `script.js` — small DOM behavior: mobile menu toggle and smooth scrolling logic. Look for element IDs `mobile-menu-toggle` and `nav-links`.
-- `CHANGELOG.md` — plain-language summary of what the site contains and how it is intended to be used.
+**Primary files**
+- `index.html`: main content and markup. Key IDs/classes: `nav`, `mobile-menu-toggle`, `nav-links`, `about`, `contact`, `contact-form`, `form-status`.
+- `styles.css`: design tokens in `:root` (e.g. `--brand-navy`, `--brand-orange`), responsive rules, and the hero background (local `assets/hero.jpg`).
+- `script.js`: mobile menu toggle, smooth scrolling (subtracts `nav` height), and AJAX contact form handler (fetch to `form.action`).
+- `CHANGELOG.md`: human summary of site scope and history.
 
-Patterns & conventions (concrete, not aspirational)
-- Design tokens: CSS variables are declared in `:root` at the top of `styles.css`. To change brand colors update `--brand-navy` and `--brand-orange`.
-  Example: `:root { --brand-navy: #1e3a5f; --brand-orange: #ff6b35; }`
-- Mobile nav: the hamburger uses id `mobile-menu-toggle`. Toggling adds/removes `active` on `#nav-links` (see `script.js`). Modify classes/styles rather than adding inline JS when possible.
-- Smooth scroll: anchors use `href="#..."` and the JS subtracts the `nav` height when calculating target position. Preserve that offset calculation when changing navigation height.
-- Contact form: currently posts to Formspree (action `https://formspree.io/f/xvgdopwr`) with `method="post"` and `enctype="text/plain"`. To swap providers, update `action` only.
+**Concrete patterns & examples (do this here)**
+- Change colors: edit variables at the top of `styles.css` (example: `--brand-navy`, `--brand-orange`).
+- Mobile nav: use `id="mobile-menu-toggle"` and `id="nav-links"`. Toggling adds/removes the `active` class on `#nav-links` (see `script.js`).
+- Smooth scroll: anchors are `href="#section"`; the script computes `targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight`. Keep this when adjusting nav height.
+- Contact form: form element uses `id="contact-form"` and contains hidden metadata inputs: `source`, `page`, `submitted_at`, `utm_source`, `utm_medium`, `utm_campaign`. The JS populates `submitted_at` and UTM fields before sending.
+- Form submission: `fetch(form.action, { method: form.method, headers: { 'Accept': 'application/json' }, body: formData })`. On success the script replaces the form with a `thank-you` card (no redirect).
 
-Integration points / external dependencies
-- Background image in the hero uses an external Unsplash URL (in `styles.css`). Consider downloading assets into `assets/` if you want offline hosting.
-- The contact form endpoint (Formspree) is the only external form integration; there is no backend.
+**Integration points & assets**
+- External form endpoint (current): `https://formspree.io/f/xvgdopwr` — change only the `action` to swap providers.
+- Logo and hero images: `assets/staticSiteLogo.svg`, `assets/hero.jpg`. The `styles.css` hero background references `assets/hero.jpg` (preferred for offline hosting).
 
-Developer workflows (how to test changes locally)
-- No build: open `index.html` in a browser (double-click or `open index.html` on macOS).
-- Quick dev iterate: edit files, refresh browser. For local testing of form submission, use Formspree test endpoint or change form action to `mailto:` for manual testing.
+**Local developer workflows**
+- Quick preview: open `index.html` directly in a browser (`open index.html` on macOS).
+- Local server (recommended to replicate fetch behavior): run `python3 -m http.server 8000` and visit `http://localhost:8000`.
+- Test contact form: use a Formspree test form ID or temporarily set `action="mailto:you@example.com"` for manual verification. Check Network tab for the POST payload when using AJAX.
 
-Small examples to reference
-- Mobile toggle (from `script.js`):
-  - `const mobileMenuToggle = document.getElementById('mobile-menu-toggle');`
-  - toggles `navLinks.classList.toggle('active')` and closes menu when links are clicked.
-- CSS variables (from `styles.css`):
-  - `:root { --brand-navy: #1e3a5f; --brand-orange: #ff6b35; }`
+**Do / Don't (repo-specific)**
+- Do: edit HTML/CSS/JS directly; prefer CSS class toggles over inline JS changes for UI state.
+- Do: preserve accessibility hooks — `#form-status` has `role="status" aria-live="polite"` and should be used for form feedback.
+- Don't: introduce a package manager, CI, or tooling that requires build steps without owner approval.
 
-What NOT to assume
-- There is no CI, tests, or package.json — do not add automation that requires a package manager without checking with the maintainer.
-- There is no server-side form handling here; form behavior is entirely client-side and via an external service.
+**PR checklist for non-trivial changes**
+- Short description of user-visible changes.
+- Files changed and rationale (list file paths).
+- Manual test plan: open `index.html` or `http://localhost:8000`, verify hero loads, nav toggle works on mobile widths, anchor links scroll with offset, submit contact form and confirm thank-you UI.
 
-If you need to make larger changes
-- For multi-file or risky changes (e.g., redesign, swapping to a static-site generator), create a small PR and include:
-  1. A short description of user-visible changes
-  2. Files changed and why
-  3. A brief manual test plan (open `index.html`, verify hero, nav, contact form)
-
-Contact / follow-up
-- If something is unclear (e.g., intended form provider, desired branding palette, or deploying domain), ask the repo owner before introducing new tooling.
-
-— End of instructions
+If anything here is unclear or you want a different format (more verbose examples, a runnable dev script, or a local test harness), tell me which parts to expand.
