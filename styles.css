@@ -129,9 +129,10 @@ nav#nav {
 }
 
 .nav-logo {
-  height: 48px;
+  height: 45px;
   width: auto;
   display: block;
+  object-fit: contain;
 }
 
 .nav-links {
