@@ -552,6 +552,7 @@ nav#nav {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  align-items: center;
 }
 
 .footer-social a {
@@ -565,6 +566,7 @@ nav#nav {
   color: white;
   transition: all 0.3s ease;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .footer-social a:hover {
@@ -573,9 +575,10 @@ nav#nav {
 }
 
 .footer-social svg {
-  width: 20px;
-  height: 20px;
+  width: 20px !important;
+  height: 20px !important;
   fill: currentColor;
+  display: block;
 }
 
 /* Blog Section */
