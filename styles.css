@@ -1133,9 +1133,6 @@ nav#nav {
   padding: 2rem 0;
   background: white;
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 72px;
-  z-index: 100;
 }
 
 .filter-buttons {
