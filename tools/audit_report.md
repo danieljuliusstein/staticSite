@@ -1,18 +1,17 @@
-# Site Audit Report
+# Site Audit Link Validation Report
 
-**Generated:** 1768028707.564161
+**Generated:** site_audit_links.py
+
+**Files Scanned:** 22
 
 ## Summary
 
-- **Total HTML files scanned:** 20
-- **Valid internal links:** 125
-- **Valid assets:** 55
-- **Valid anchors:** 73
-- **External links (not checked):** 15
-- **Broken internal links:** 0
-- **Broken assets:** 0
-- **Broken anchors:** 0
+- Total HTML files: 22
+- Total internal links: 443
+- Total external links: 127
+- Broken internal links: 0
+- Broken anchors: 0
+- External links missing security attrs: 0
 
-## ✅ All Clear!
+✅ **All checks passed!**
 
-No broken links, assets, or anchors detected.
