@@ -555,12 +555,12 @@ nav#nav {
 
 .footer-brand-subtitle {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1rem;
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   max-width: 400px;
 }
@@ -572,7 +572,7 @@ nav#nav {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
 }
 
@@ -584,7 +584,7 @@ nav#nav {
   text-align: center;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.875rem;
 }
 
