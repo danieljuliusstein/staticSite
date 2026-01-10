@@ -2012,3 +2012,58 @@ nav#nav {
     margin-top: 0.5rem;
   }
 }
+
+/* ============================================
+   SERVICE PAGE & FAQ STYLES
+   ============================================ */
+
+.faq-question {
+  color: var(--brand-navy);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.faq-question:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.service-list-inline {
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+
+.service-list-columns {
+  line-height: 1.8;
+  margin-left: 1.5rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.section-spacer {
+  margin-top: 3rem;
+}
+
+.faq-container {
+  margin-top: 2rem;
+}
+
+.centered-content {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* Thank you page specific */
+.thanks-main {
+  padding: 6rem 1.5rem;
+  max-width: 900px;
+}
+
+.thanks-cta {
+  margin-top: 1rem;
+}
+
+/* Projects page no-results */
+.no-results-hidden {
+  display: none;
+}
