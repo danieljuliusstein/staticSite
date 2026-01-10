@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View our portfolio of completed remodeling, painting, and renovation projects in Cumming, GA and surrounding areas.">
+  <title>Our Projects - Resilience Solutions</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/staticSiteLogo.svg">
+  <link rel="alternate icon" href="/assets/staticSiteLogo.svg">
+  
+  <!-- SEO -->
+  <link rel="canonical" href="https://resiliencesolutionsga.com/projects.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/script.js"></script>
+  <script defer src="/portfolio.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="nav-brand-link">
+          <img src="/assets/staticSiteLogo.svg" alt="Resilience Solutions" class="nav-logo">
+        </a>
+        <div class="nav-brand-text">
+          <div class="nav-brand-title">Resilience Solutions</div>
+          <div class="nav-brand-subtitle">Quality Remodeling & Finishing</div>
+        </div>
+      </div>
+
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/#about" class="nav-link">About</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/projects.html" class="nav-link active">Projects</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/#contact" class="btn btn-primary">Get Free Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Portfolio Header -->
+  <section class="portfolio-header">
+    <div class="container">
+      <h1 class="portfolio-title">Our <span class="text-orange">Projects</span></h1>
+      <p class="portfolio-subtitle">Explore our completed remodeling, painting, and renovation work throughout Cumming, GA and surrounding areas.</p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section class="portfolio-filters">
+    <div class="container">
+      <div class="filter-buttons" role="group" aria-label="Project category filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen Remodeling</button>
+        <button class="filter-btn" data-filter="bathroom">Bathroom Remodeling</button>
+        <button class="filter-btn" data-filter="painting">Interior Painting</button>
+        <button class="filter-btn" data-filter="drywall">Drywall Repair</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="portfolio-grid" id="portfolio-grid">
+        
+        <!-- Project 1: Kitchen Remodel -->
+        <article class="portfolio-card" data-category="kitchen">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop&q=80" 
+              alt="Modern kitchen remodel with white cabinets and quartz countertops in Cumming, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Kitchen Remodeling</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Modern Kitchen Transformation</h3>
+            <p class="portfolio-location">Cumming, GA</p>
+            <p class="portfolio-description">Complete kitchen renovation featuring custom white cabinetry, quartz countertops, and modern lighting fixtures.</p>
+            <button class="portfolio-cta" aria-label="View modern kitchen transformation project details">View Project</button>
+          </div>
+        </article>
+
+        <!-- Project 2: Bathroom Remodel -->
+        <article class="portfolio-card" data-category="bathroom">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop&q=80" 
+              alt="Spa-inspired bathroom remodel with walk-in shower in Johns Creek, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Bathroom Remodeling</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Spa-Inspired Bathroom Retreat</h3>
+            <p class="portfolio-location">Johns Creek, GA</p>
+            <p class="portfolio-description">Luxurious bathroom redesign with walk-in rainfall shower, heated floors, and custom tile work.</p>
+            <button class="portfolio-cta" aria-label="View spa bathroom retreat project details">View Project</button>
+          </div>
+        </article>
+
+        <!-- Project 3: Interior Painting -->
+        <article class="portfolio-card" data-category="painting">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&h=600&fit=crop&q=80" 
+              alt="Professional interior painting in living room with accent wall in Alpharetta, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Interior Painting</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Living Room Color Refresh</h3>
+            <p class="portfolio-location">Alpharetta, GA</p>
+            <p class="portfolio-description">Complete interior painting with custom accent wall and trim work to brighten the entire living space.</p>
+            <button class="portfolio-cta" aria-label="View living room color refresh project details">View Project</button>
+          </div>
+        </article>
+
+        <!-- Project 4: Master Bedroom Paint -->
+        <article class="portfolio-card" data-category="painting">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=600&fit=crop&q=80" 
+              alt="Serene bedroom painting with soft neutral colors in Milton, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Interior Painting</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Serene Bedroom Makeover</h3>
+            <p class="portfolio-location">Milton, GA</p>
+            <p class="portfolio-description">Peaceful bedroom transformation using warm neutral tones with professional trim and ceiling work.</p>
+            <button class="portfolio-cta" aria-label="View serene bedroom makeover project details">View Project</button>
+          </div>
+        </article>
+
+        <!-- Project 5: Drywall Repair -->
+        <article class="portfolio-card" data-category="drywall">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop&q=80" 
+              alt="Professional drywall repair and finishing in Suwanee, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Drywall Repair</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Seamless Drywall Restoration</h3>
+            <p class="portfolio-location">Suwanee, GA</p>
+            <p class="portfolio-description">Expert drywall repair and texture matching after water damage, with flawless paint finish.</p>
+            <button class="portfolio-cta" aria-label="View seamless drywall restoration project details">View Project</button>
+          </div>
+        </article>
+
+        <!-- Project 6: Kitchen Cabinets -->
+        <article class="portfolio-card" data-category="kitchen">
+          <div class="portfolio-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&h=600&fit=crop&q=80" 
+              alt="Custom kitchen cabinet painting and hardware upgrade in Cumming, GA"
+              class="portfolio-image"
+              loading="lazy"
+              width="800"
+              height="600"
+            >
+            <div class="portfolio-overlay">
+              <span class="portfolio-category">Kitchen Remodeling</span>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-card-title">Cabinet Refinishing & Update</h3>
+            <p class="portfolio-location">Cumming, GA</p>
+            <p class="portfolio-description">Professional cabinet painting with new hardware to completely refresh kitchen appearance.</p>
+            <button class="portfolio-cta" aria-label="View cabinet refinishing project details">View Project</button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results" id="no-results" style="display: none;">
+        <p>No projects found in this category. <button class="filter-reset" onclick="resetFilters()">View all projects</button></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="portfolio-cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Start Your Project?</h2>
+        <p class="cta-text">Let's bring your vision to life with the same quality and attention to detail you see in our portfolio.</p>
+        <a href="/#contact" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-brand-title">Resilience Solutions</div>
+          <div class="footer-brand-subtitle">Quality Remodeling & Finishing</div>
+          <p class="footer-description">
+            Transforming homes with exceptional craftsmanship and unwavering commitment to quality.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="/#about">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/#contact">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Resilience Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+    </div>
+  </footer>
+
+  <!-- Modal for Project Details (optional enhancement) -->
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close project details">×</button>
+      <div id="modal-body">
+        <!-- Dynamic content loaded by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -16,6 +16,22 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- Projects Portfolio -->
+  <url>
+    <loc>https://resiliencesolutionsga.com/projects.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://resiliencesolutionsga.com/projects.html</loc>
+    <lastmod>2025-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <!-- Blog Posts -->
   <url>
     <loc>https://resiliencesolutionsga.com/blog/how-much-does-interior-painting-cost.html</loc>
